@@ -1,10 +1,10 @@
 services:
-  app_name:                    # Name of the service
-    container_name: app_name   # Name of the container
-    image: ghcr.io/gh-username/app_name:latest  # Use the latest image from GHCR
+  tower:                    # Name of the service
+    container_name: tower   # Name of the container
+    image: ghcr.io/adamrb208/tower_2:latest  # Use the latest image from GHCR
     ports: 
-      - "7045:8080"         # Map port 7045 on the host to port 8080 in the container
+      - "7045:3000"         # Map port 7045 on the host to port 8080 in the container
     env_file:
-      - .env.app_name          # Load environment variables from .env.app_name file
+      - .env.tower          # Load environment variables from .env.app_name file
     labels:
-      caddy.domain: your.domain.com  # Caddy label for domain routing <app_name.gregslist.dev>
+      caddy.domain: tower.domain.com  # Caddy label for domain routing <app_name.gregslist.dev>
