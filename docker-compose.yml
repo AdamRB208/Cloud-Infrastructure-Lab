@@ -7,4 +7,4 @@ services:
     env_file:
       - .env.tower          # Load environment variables from .env.app_name file
     labels:
-      caddy.domain: tower.domain.com  # Caddy label for domain routing <app_name.gregslist.dev>
+      caddy.domain: tower.adamrb-portfolio.com  # Caddy label for domain routing <app_name.gregslist.dev>
