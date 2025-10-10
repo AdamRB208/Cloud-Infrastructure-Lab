@@ -8,3 +8,12 @@ services:
       - .env.tower          # Load environment variables from .env.app_name file
     labels:
       caddy.domain: tower.adamrb-portfolio.com  # Caddy label for domain routing <app_name.gregslist.dev>
+  keepr:                    # Name of the service
+    container_name: keepr   # Name of the container
+    image: ghcr.io/adamrb208/keepr_dotnet_fullstack:latest  # Use the latest image from GHCR
+    ports: 
+      - "7045:3000"         # Map port 7045 on the host to port 8080 in the container
+    env_file:
+      - .env.keepr          # Load environment variables from .env.app_name file
+    labels:
+      caddy.domain: keepr.adamrb-portfolio.com 
